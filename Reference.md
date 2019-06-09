@@ -97,8 +97,8 @@ Required Headers:
 <b>with_gt</b> : if True, it indicates that the arrays listed on the `test_file` contain ground_truth information embedded on them (e.g, like the data on training and validation set). If False, it means it contains only environment features (X) <br>
 <b>model_dir</b> : path to pre-trained model directory <br>
 <b>model_label</b> : label chosen for the model <br>
-<b>init_value</b> : </b> fixed initial sequence value to be used by all episodes <br> (<b>Note:</b> if not specified, the inital value will be taken from the ground truth data `if provided`)
+<b>init_value</b> : </b> fixed initial sequence value to be used by all episodes <br> (<b>Note:</b> if not specified, the inital value will be taken from the ground truth data `if provided`) <br>
 <b>output_dir</b> : directory where to save output plots <br>
 <b>policy_load</b> : Possible choices: <br>
     `best_policy` : loads the policy estimated to be the best one, according to some criteria of smoothness and accuracy. <br>
-    `integer in range [0, n. of trained policies]` : load a specific policy chosen by the user <br>
+    `integer in range [0, n. of trained policies]` : load a specific policy chosen by the user <br>>
