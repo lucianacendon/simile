@@ -158,6 +158,16 @@ def check_train_input(config):
 		print ('Please check the config file.')
 		exit()
 
+	if (int(config['SIMILE']['tao']) < 2):
+		print ('Error: tao should be an integer greater than 2.')
+		print ('Please check the config file.')
+		exit()
+
+	if (float(config['SIMILE']['sigma']) > 1 or float(config['SIMILE']['sigma']) < 0):
+		print ('Error: sigma should be a value between [0, 1]')
+		print ('Please check the config file.')
+		exit()
+
 	# Making sure model directory exists
 	if not os.path.exists(config['DATA']['model_dir']):
 		os.makedirs(config['DATA']['model_dir'])

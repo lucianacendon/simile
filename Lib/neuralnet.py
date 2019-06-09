@@ -14,6 +14,7 @@ class NeuralNet():
 		self.session = model_param['session']
 
 		if (model_param['train'] == True):
+			# Training Mode #
 			self.it = model_param['it']
 			self.learning_param = learning_param
 			self.log_file = data_param['log_file']
@@ -22,6 +23,7 @@ class NeuralNet():
 			
 			self.build_graph()
 		else:
+			# Test mode #
 			self.policy_file = self.model_param['policy_file']
 
 			self.build_network()

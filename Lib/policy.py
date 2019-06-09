@@ -73,7 +73,8 @@ class Policy():
 				else:
 					y_hat[i], y_hat_raw[i], a_h[i] = self.get_smooth_prediction (state)
 
-			recent_actions.popleft()
+			if (recent_actions):
+				recent_actions.popleft()
 			recent_actions.append(y_hat[i])
 
 			dp_n += 1

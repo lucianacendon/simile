@@ -9,8 +9,10 @@ class XGBoost ():
 		self.model_param = model_param
 
 		if (model_param['train'] == False):
+			# Test mode #
 			self.xgreg = self.load_model_file(model_param['policy_file'])
 		else:
+			# Training mode #
 			self.it = model_param['it']
 			self.learning_param = learning_param
 			self.log_file = data_param['log_file']

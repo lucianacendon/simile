@@ -19,16 +19,18 @@ class SimileDataManipulator():
 		train_file.close()
 		print ('Number of Training Episodes: ', n_train_episodes)
 
-		try:
+		try: 
+			valid_file = config['DATA']['valid_file']
+			include_validation = True
+		except:
+			include_validation = False
+
+		if (include_validation):
 			valid_file = open(config['DATA']['valid_file'], 'r')
 			valid_file_paths = valid_file.readlines()
 			n_valid_episodes = len(valid_file_paths)
 			valid_file.close()
-
 			print ('Number of Validation Episodes: ', n_valid_episodes) 
-			include_validation = True
-		except:
-			include_validation = False
 
 		# Formating Episodes
 		X_train_episodes, Y_train_episodes, init_values_train = self.format_episodes (train_file_paths, with_gt=True)
