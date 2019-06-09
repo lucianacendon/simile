@@ -1,7 +1,7 @@
 # Smooth Imitation Learning for Online Sequence Prediction [SIMILE]
 
 This repository contains my implementation of the [Smooth Imitation Learning algorithm for Online Sequence Prediction](https://arxiv.org/abs/1606.00968) algorithm developed by [Hoang M.Le](http://hoangle.info/) at prof.[Yisong Yue](http://www.yisongyue.com/)'s group at Caltech. This algorithm allows one to train policies that are constrained to make smooth predictions in a continuous action space given sequential input from an exogenous environment and previous actions taken by the policy. <br>
-I successfully applied this algorithm to train a policy for automated video editing. You can find more details about my project and results at this [link](https://sites.google.com/view/smooth-imitation-learning/). <br>
+I successfully applied this algorithm to train a policy able to do automated video editing. You can find more details about my project and results at this [link](https://sites.google.com/view/smooth-imitation-learning/). <br>
 This implementation is intended to allow you to use this imitation learning algorithm to train your own policies and adapt it to your own application.
 
 ## Installation
@@ -16,7 +16,7 @@ There are two example files at the base folder of the repository: `train_simile.
 
 You will notice that both scripts are very simple and only require a `config` file as input. The config file contains the parameters used for training and testing, as well as paths to your data. As you can imagine, setting-up these config files correctly is vital for fitting of your data correctly as well as the proper functioning of the code. Therefore, I also included at the base folder two config file examples: `config_train.ini` and `config_test.ini`, which you can modify to fit your data and application.
 
-You can get started by making sure the code is running smoothly on your machine. With that in mind, I included a pre-trained model with the repository (inside directory `ReleaseModel`) and a test case example (inside directory `Data`). The parameters for this test case are already defined in `config_test.ini`, so all you need to do is run:
+You can get started by making sure the code is running smoothly on your machine. For that purpose, I included a pre-trained model with the repository (inside directory `ReleaseModel`) and a test case example (inside directory `Data`). The parameters for this test case are already defined in `config_test.ini`, so all you need to do is run:
 ```
     python test_simile.py
 ```
@@ -61,7 +61,7 @@ You can also find a more detailed discussion about Simile at my [project page](h
 
 ## Preparing Data 
 
-If you check the example config files, you'll notice that the data is fed to the library in the form of XML files. These XML files should contain a list of paths to your data episodes, arranged in a specific format as follows:
+If you check the example config files, you'll notice that the data is fed to the library in the form of XML files. These XML files should contain a list of paths to your data episodes. Your data should be arranged in a specific format as follows:
 
 <b>1.</b> Each episode should be arranged in numpy arrays such as each row of the array should contain both the features and the respective expert demonstration in a single row: 
 ```
@@ -86,3 +86,4 @@ Sequential information is important here, so it is imperative that the row numbe
 * <b>Luciana Cendon</b>
     - Research Engineer with 3 years of experience in the fields of <b>Machine Learning</b> and <b>Computer Vision</b> and a degree from Caltech. 
     - Contact: luciana.hpcendon@gmail.com
+    - Linkedin:  https://www.linkedin.com/in/luciana-cendon/
