@@ -31,8 +31,9 @@ Required Headers depending on choices:
 
 ### [ SIMILE ]
 <b>tao :</b> time-horizon <br>
-<b>sigma :</b> smooth feedback parameter. This parameter decays exponentially with the learning iterations, according with: <br>
-    sigma = sigma<sub>0</sub> / 1.6<sup>it-1</sup>
+<b>sigma :</b> initial smooth feedback parameter (sigma<sub>0</sub>). This parameter decays exponentially with the learning iterations, according with: <br>
+    sigma = sigma<sub>0</sub> / 1.6<sup>n-1</sup> <br>
+
 <b>lambd_smooth :</b> loss function regularization (controls closeness to smooth function)<br>
 <b>n_it :</b> number of learning iterations <br>
 <b>autoreg_type :</b> choice of smooth regularizer. Possible choices: <br>
@@ -40,7 +41,7 @@ Required Headers depending on choices:
     `constant` : previous action <br>
     `linear` : prediction of a linear autoregressor trained to predict current action given previous `tao-1` actions <br>
     `geometric_velocity` : weighted velocity relationship between previous `tao-1` actions. <br>For `tao`=5: <br>
-       a<sub>t</sub> = a<sub>t-1</sub> + γ ( a<sub>t-1</sub> - a<sub>t-2</sub> ) + γ<sup>2</sup> ( a<sub>t-1</sub> - a<sub>t-2</sub> ) + γ<sup>3</sup> ( a<sub>t-3</sub> - a<sub>t-4</sub> )
+       a<sub>t</sub> = a<sub>t-1</sub> + γ ( a<sub>t-1</sub> - a<sub>t-2</sub> ) + γ<sup>2</sup> ( a<sub>t-1</sub> - a<sub>t-2</sub> ) + γ<sup>3</sup> ( a<sub>t-3</sub> - a<sub>t-4</sub> ) <br>
 
 <b>policy_type :</b> choice of supervised model class. Possible choices: <br>
     `xgboost` : [parallel tree boosting](https://xgboost.readthedocs.io/en/latest/) <br>
@@ -101,4 +102,4 @@ Required Headers:
 <b>output_dir</b> : directory where to save output plots <br>
 <b>policy_load</b> : Possible choices: <br>
     `best_policy` : loads the policy estimated to be the best one, according to some criteria of smoothness and accuracy. <br>
-    `integer in range [0, n. of trained policies]` : load a specific policy chosen by the user <br>>
+    `integer in range [0, n. of trained policies]` : load a specific policy chosen by the user <br>

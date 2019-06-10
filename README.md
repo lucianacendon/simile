@@ -1,7 +1,7 @@
 # Smooth Imitation Learning for Online Sequence Prediction [SIMILE]
 
 This repository contains my implementation of the [Smooth Imitation Learning algorithm for Online Sequence Prediction](https://arxiv.org/abs/1606.00968) algorithm developed by [Hoang M.Le](http://hoangle.info/) at prof.[Yisong Yue](http://www.yisongyue.com/)'s group at Caltech. This algorithm allows one to train policies that are constrained to make smooth predictions in a continuous action space given sequential input from an exogenous environment and previous actions taken by the policy. <br>
-I successfully applied this algorithm to train a policy able to do automated video editing. You can find more details about my project and results at this [link](https://sites.google.com/view/smooth-imitation-learning/). <br>
+I successfully applied this algorithm to train a policy able to do automated video editing. You can find more details about my project and results at the [project page](https://sites.google.com/view/smooth-imitation-learning/). <br>
 This implementation is intended to allow you to use this imitation learning algorithm to train your own policies and adapt it to your own application.
 
 ## Installation
@@ -61,7 +61,7 @@ You can also find a more detailed discussion about Simile at my [project page](h
 
 ## Preparing Data 
 
-If you check the example config files, you'll notice that the data is fed to the library in the form of XML files. These XML files should contain a list of paths to your data episodes. Your data should be arranged in a specific format as follows:
+If you check the example config files, you'll notice that the data is fed to the library in the form of XML files through variables `train_file`, `valid_file`, `test_file`. These XML files should contain a list of paths to your data episodes, with the data arranged in a specific format as follows:
 
 <b>1.</b> Each episode should be arranged in numpy arrays such as each row of the array should contain both the features and the respective expert demonstration in a single row: 
 ```
@@ -72,7 +72,7 @@ Sequential information is important here, so it is imperative that the row numbe
 
 <b>2.</b> Each episode should be arranged in a single numpy array, and saved in a single dedicated pickle file.  <br>
 
-<b>3.</b> The path to each pickle file (episode) should be listed on an XML file. This final XML will be fed to the library to train and test your model. (through variables `train_file`, `valid_file`, `test_file`) <br> <br>
+<b>3.</b> The path to each pickle file (episode) should be listed on an XML file. This final XML will be fed to the library to train and test your model.  <br> <br>
 
 
 ### Notes:
