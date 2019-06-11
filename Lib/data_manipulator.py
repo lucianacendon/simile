@@ -179,13 +179,14 @@ class SimileDataManipulator():
 			data.update({'Y_train_episodes' : Y_train_episodes})
 
 			self.data_param['init_pred_train'] = self.normalize_init(self.data_param['init_pred_train'], Y_norm_param)
-			# self.data_param.update({'init_pred_train' : self.data_param['init_pred_train']})
+			self.data_param.update({'init_pred_train' : self.data_param['init_pred_train']})
 
 			if (self.op_param['include_validation']):
 				Y_valid_episodes = self.normalize_test_episodes (data['Y_valid_episodes'], Y_norm_param, env=False)
 				data.update({'Y_valid_episodes' : Y_valid_episodes})
 
 				self.data_param['init_pred_valid'] = self.normalize_init(self.data_param['init_pred_valid'], Y_norm_param)
+				self.data_param.update({'init_pred_valid' : self.data_param['init_pred_valid']})
 
 		return data, self.data_param
 
