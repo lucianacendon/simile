@@ -84,6 +84,6 @@ Sequential information is important here, so it is imperative that the row numbe
 
 ## Author
 * <b>Luciana Cendon</b>
-    - Research Engineer with 3 years of experience in the fields of <b>Machine Learning</b> and <b>Computer Vision</b> and a degree from Caltech. 
+    - Research Engineer working in the fields of <b>Machine Learning</b> and <b>Computer Vision</b>. 
     - Contact: luciana.hpcendon@gmail.com
     - Linkedin:  https://www.linkedin.com/in/luciana-cendon/
