@@ -1,7 +1,7 @@
 # Smooth Imitation Learning for Online Sequence Prediction [SIMILE]
 
 This is my implementation of the [Smooth Imitation Learning algorithm for Online Sequence Prediction](https://arxiv.org/abs/1606.00968) algorithm. This algorithm allows one to train policies that are constrained to make smooth predictions in a continuous action space given sequential input from an exogenous environment and previous actions taken by the policy. <br>
-I previously used this algorithm to train a policy for automated video editing. When editing videos, it is imperative for the resulting predictions to be smooth in order to produce aesthetic videos. You can find more details about this project and results on my [project page](https://sites.google.com/view/smooth-imitation-learning/). <br>
+I previously used this algorithm to train a policy for automated video editing. When editing videos, it is important that the predictions are smooth in order to produce aesthetic videos. You can find more details about this project and results on my [project page](https://sites.google.com/view/smooth-imitation-learning/). <br>
 This implementation is intended to make training policies using the simile algorithm available to any application.
 
 ## Installation
