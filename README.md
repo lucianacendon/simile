@@ -12,13 +12,13 @@ Clone the repository, create a virtual environment, then go to the base folder a
 Once the command finishes running, you're ready to use the library.
 
 ## Getting Started
-There are two main files at the base folder: `train_simile.py` and `test_simile.py`. These files are used for training and prediction, respectively. Both scripts only require a `config` file as input. These config files contain parameters used for training and testing, as well as paths to your data. Setting-up these config files properly is key to using this library succesfully. I included two reference config files, `config_train.ini` and `config_test.ini`, which you can modify according to your application and needs. However, having a good understanding of how the algorithm works is very important to make parameter choices that best fit your data. Therefore, please consider reading the paper before anything. 
+In order to run Simile in training or prediction mode, you should use `train_simile.py` or `test_simile.py`. Both scripts only require a `config` file as input. These config files contain parameters used for training and testing, as well as paths to your data. Setting-up these config files properly is key to using this library succesfully. I included two reference config files, `config_train.ini` and `config_test.ini`, which you can modify according to your application and needs. However, having a good understanding of how the algorithm works is very important to make parameter choices that best fit your data. Therefore, please consider reading the paper before anything. 
 
-A good way to get started using this library is to make sure that the code is running properly on your machine. Only for that purpose, I included a pre-trained model with this repository (inside directory `ReleaseModel`) and a test case example (inside directory `Data`). The parameters for this test case are already defined in `config_test.ini`, so all you need to do is run:
+A good way to get started is to make sure the code is running properly on your machine. Only for that purpose, I included a pre-trained model with this repository (inside directory `ReleaseModel`) and a test case example (inside directory `Data`). The parameters for this specific test case are defined in `config_test.ini`, so all you need to do is run:
 ```
     python test_simile.py
 ```  
-If everything is working as it should, you should find all resulting plots inside directory `ReleaseModel/Plots`. 
+If everything is working as expected, you should find all resulting plots inside directory `ReleaseModel/Plots`. 
 
 ## Usage
 ### Training
@@ -32,8 +32,6 @@ Alternatively, you may wish to use a config file located at a different director
     python train_simile.py -config Path/to/config_file
 ```
 
-As another option, you may change the default config location by replacing `'default=config_train.ini'` with `'default=Path/to/config_file'` on `train_simile.py`.
-
 ### Test
 You will need to modify `config_test.ini` with parameters of your choice and path to a trained model, and run:
 ```
@@ -45,11 +43,9 @@ Alternatively, you may wish to use a config file located at a different director
     python test_simile.py -config Path/to/config_file
 ```
 
-As another option, you may change the default config location by replacing `'default=config_test.ini'` with `'default=Path/to/config_file'` on `test_simile.py`.
-
 ## Preparing config files
 
-The library takes config files as input. On the reference config files (`config_train.ini` and `config_test.ini`), you'll find headers defined between `[]` and their respective variables listed right below. [Here](https://github.com/lucianacendon/simile/blob/master/Reference.md) you can find documentation about headers and variable names to be used with these config files. 
+The library takes config files as input. In the reference config files (`config_train.ini` and `config_test.ini`), you'll find headers defined between `[]` and their respective variables listed right below. [Here](https://github.com/lucianacendon/simile/blob/master/Reference.md) you can find documentation about headers and variable names to be used with these config files. 
 
 You can also find a more detailed discussion about Simile and how it was a good fit for my application on my [project page](https://sites.google.com/view/smooth-imitation-learning/). <br>
 
